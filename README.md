@@ -1,3 +1,3 @@
 # RadioListView
 
-![screenshot.png](Screenshot)
+![Screenshot](screenshot.png)
