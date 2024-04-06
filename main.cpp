@@ -4,9 +4,11 @@
 #include <shlwapi.h>
 #include "resource.h"
 
+// 状態インデックス。
 #define I_UNCHECKED 1
 #define I_CHECKED 2
 
+// 更新チェック用の変数。
 INT s_nUpdating = 0;
 
 // ラジオボタン風の状態を表示するためのイメージリストを作成する。
