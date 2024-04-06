@@ -181,11 +181,10 @@ LRESULT OnNotify(HWND hwnd, int idFrom, LPNMHDR pnmhdr)
     switch (idFrom)
     {
     case lst1:
-        // 更新中ではなく、選択が変更された。
         if (pnmhdr->code == LVN_ITEMCHANGED && !s_nUpdating)
         {
             NM_LISTVIEW *pListView = (NM_LISTVIEW *)pnmhdr;
-            if (pListView->uNewState & LVIS_SELECTED)
+            if (pListView->uNewState & LVIS_SELECTED) // 更新中ではないときに選択が変更された。
             {
                 HWND hwndLst1 = GetDlgItem(hwnd, lst1);
 
